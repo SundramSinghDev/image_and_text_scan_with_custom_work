@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/rotationTv"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:elevation="10dp"
+            android:textColor="@color/teal_200"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ListView
+            android:id="@+id/labelDataListview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#99111111"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/image_capture_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:elevation="10dp"
+            android:src="@drawable/ic_twotone_camera_24"
+            app:layout_constraintEnd_toEndOf="@id/flashBtn"
+            app:layout_constraintTop_toBottomOf="@id/turnCameraFace"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/turnCameraFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:elevation="10dp"
+            android:src="@drawable/ic_twotone_cameraswitch_24"
+            app:layout_constraintEnd_toEndOf="@id/flashBtn"
+            app:layout_constraintTop_toBottomOf="@id/flashBtn" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/flashBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="10dp"
+            android:src="@drawable/ic_baseline_flashlight_on_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
